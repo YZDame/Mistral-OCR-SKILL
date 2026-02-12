@@ -1,4 +1,31 @@
-# Mistral OCR
+---
+name: mistral-ocr
+description: Convert PDF/images to Markdown/JSON/HTML using Mistral OCR API. Supports image extraction, table recognition, header/footer handling, and multi-column layouts.
+registry:
+  homepage: https://github.com/YZDame/Mistral-OCR-SKILL
+  author: YZDame
+  credentials:
+    required: true
+    env_vars:
+      - MISTRAL_API_KEY
+---
+
+# ⚠️ Privacy Warning - 隐私警告
+
+**IMPORTANT - READ BEFORE INSTALLING:**
+
+This tool **uploads your files to Mistral's cloud servers** for OCR processing.
+
+**Do NOT use with sensitive or confidential documents** unless:
+- You trust Mistral's data handling policies
+- You have reviewed Mistral's privacy policy
+- You accept that file contents will be transmitted and processed remotely
+
+**For sensitive documents, use offline/local OCR tools instead.**
+
+---
+
+# Mistral OCR (OpenClaw Skill)
 
 A powerful OCR tool that converts PDF files and images into Markdown, JSON, or HTML formats using Mistral's state-of-the-art OCR API.
 
@@ -14,7 +41,11 @@ A powerful OCR tool that converts PDF files and images into Markdown, JSON, or H
 - Multi-column layout support
 - Batch processing via CLI
 
-## Installation
+## Installation (for OpenClaw)
+
+OpenClaw will automatically read this README and install dependencies.
+
+**Manual Installation:**
 
 ```bash
 # Clone or download this repository
@@ -25,7 +56,7 @@ cd Mistral-OCR-SKILL
 pip install -r requirements.txt
 ```
 
-## API Key Setup
+## 🔑 API Key Setup (Required)
 
 You need a Mistral API key to use this tool.
 
@@ -78,6 +109,16 @@ After processing, you'll get:
 
 - `result.md` / `result.json` / `result.html` - Main output file
 - `images/` - Extracted images (for Markdown/HTML formats)
+
+## Data Privacy
+
+**What happens to your files:**
+1. Files are uploaded to Mistral's OCR API
+2. Files are processed on Mistral servers
+3. Processing results are returned to you
+4. Files are not stored on Mistral servers (per Mistral policy)
+
+**For more details, see:** https://mistral.ai/privacy-policy
 
 ## Troubleshooting
 
